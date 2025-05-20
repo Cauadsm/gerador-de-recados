@@ -1,0 +1,15 @@
+# PyInstaller
+dist/
+build/
+__pycache__/
+*.spec
+
+# Arquivos temporários
+*.pyc
+*.pyo
+*.pyd
+
+# Configs de IDE
+.vscode/
+.idea/
+*.log
