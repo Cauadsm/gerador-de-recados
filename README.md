@@ -33,5 +33,12 @@ Este é um sistema feito em **PyQt5** para auxiliar professores e professoras na
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+````
+2. Instale as dependencias
+````bash
 pip install pyqt5
+````
+3. Rode o arquivo:
+````bash
 python main.py
+````
