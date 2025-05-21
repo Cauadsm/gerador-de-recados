@@ -10,8 +10,10 @@ import sys
 from datetime import datetime
 
 class RecadoApp(QWidget):
-    def __init__(self):
+    def __init__(self, controlador):
         super().__init__()
+        self.controlador = controlador
+        
         self.setWindowTitle("📢 Gerador de Recados - Prof. Cauã")
         self.setWindowIcon(QIcon("src/icone.ico"))
         self.setFixedSize(800, 700)
@@ -135,7 +137,16 @@ class RecadoApp(QWidget):
         layout.addWidget(QLabel("Recado Gerado:"))
         layout.addWidget(self.resultado)
 
+        # Botão Voltar
+        self.btn_voltar = QPushButton("🔙 Voltar ao Menu")
+        self.btn_voltar.clicked.connect(self.voltar_menu)
+        layout.addWidget(self.btn_voltar)
+
         self.setLayout(layout)
+        
+    def voltar_menu(self):
+        self.controlador.setCurrentIndex(0)
+
 
     def linha(self, label_texto, widget):
         layout = QHBoxLayout()
@@ -212,10 +223,3 @@ Qualquer dúvida, fico à disposição!
         self.link_input.clear()
         self.desc_link_input.clear()
         self.resultado.clear()
-
-# Executar
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    janela = RecadoApp()
-    janela.show()
-    sys.exit(app.exec_())
