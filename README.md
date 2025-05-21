@@ -31,7 +31,7 @@ Este é um sistema feito em **PyQt5** para auxiliar professores e professoras na
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Cauadsm/gerador-de-recados.git
 cd seu-repositorio
 ````
 2. Instale as dependencias
